@@ -14,12 +14,12 @@ namespace TopSystemsTask
     public class DefaultValues
     {
         public const double WH100 = 100;
-        public const double WH60 = 60; //new Point(0, 0), new Point(50, 0), new Point(25, 50)
-        public static ObservableCollection<PointsModel> Points = new ObservableCollection<PointsModel>()
+        public const double WH60 = 60;
+        public static ObservableCollection<PointsModel> Points = new()
         {
             new PointsModel(0,0),
             new PointsModel(50,0),
-            new PointsModel(25,50)
+            new PointsModel(25,-50)
         };
 
     }

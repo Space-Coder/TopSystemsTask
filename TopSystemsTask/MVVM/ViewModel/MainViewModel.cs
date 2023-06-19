@@ -76,23 +76,16 @@ namespace TopSystemsTask.MVVM.ViewModel
             get { return _selectedShape; }
             set
             {
-                if (CopPoints != null)
-                {
-                    CopPoints.Clear();
-                }
+                CopPoints?.Clear();
                 if (value.ShapeType == typeof(Polygon))
                 {
                     if (((PolygonModel)value).Points != null && ((PolygonModel)value).Points.Count > 0)
                     {
                         foreach (var item in ((PolygonModel)value).Points.ToList())
                         {
-                            if (CopPoints == null)
-                            {
-                                CopPoints = new ObservableCollection<PointsModel>();
-                            }
+                            CopPoints ??= new ObservableCollection<PointsModel>();
                             CopPoints.Add(new PointsModel(item.X, item.Y));
                         }
-                        //((PolygonModel)value).Points = new PointCollection();
                     }
                 }
                 _selectedShape = value;

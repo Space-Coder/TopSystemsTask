@@ -24,7 +24,7 @@ namespace TopSystemsTask.MVVM.Model
         }
         public PolygonModel(ObservableCollection<PointsModel> _points, double _height, double _width)
         {
-            PointCollection pointCollection = new PointCollection();
+            PointCollection pointCollection = new();
             Height = _height;
             Width = _width;
             foreach (var p in _points)
