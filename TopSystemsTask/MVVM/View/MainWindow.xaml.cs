@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 
-namespace TopSystemsTask
+namespace TopSystemsTask.MVVM.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,5 +25,6 @@ namespace TopSystemsTask
         {
             InitializeComponent();
         }
+
     }
 }
